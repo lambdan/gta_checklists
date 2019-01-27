@@ -1,0 +1,387 @@
+{
+	"VC": {
+		"Story Missions": {
+			"Ken Rosenberg": {
+				"The Party": false,
+				"Back Alley Brawl": false,
+				"Jury Fury": false,
+				"Riot": false
+			},
+			"Colonel Cortez": {
+				"Treacherous Swine": false,
+				"Mall Shootout": false,
+				"Guardian Angels": false,
+				"Sir, Yes Sir!": false,
+				"All Hands on Deck": false
+			},
+			"Ricardo Diaz": {
+				"The Chase": false,
+				"Phnom Penh '86": false,
+				"The Fastest Boat": false,
+				"Supply & Demand": false
+			},
+			"Kent Paul": {
+				"Death Row": false
+			},
+			"Tommy Vercetti": {
+				"Rub Out": false,
+				"Shakedown": false,
+				"Bar Brawl": false,
+				"Copland": false,
+				"Cap the Collector": false,
+				"Keep Your Friends Close...": false
+			}
+		},
+		"Side Missions": {
+			"Avery Carrington": {
+				"Four Iron": false,
+				"Demolition Man": false,
+				"Two Bit Hit": false
+			},
+			"Umberto Robina": {
+				"Stunt Boat Challenge": false,
+				"Cannon Fodder": false,
+				"Naval Engagement": false,
+				"Trojan Voodoo": false
+			},
+			"Auntie Poulet": {
+				"Juju Scramble": false,
+				"Bombs Away!": false,
+				"Dirty Lickin's": false
+			},
+			"Love Fist": {
+				"Love Juice": false,
+				"Psycho Killer": false,
+				"Publicity Tour": false
+			},
+			"Mitch Baker": {
+				"Alloy Wheels of Steel": false,
+				"Messing with the Man": false,
+				"Hog Tied": false
+			},
+			"Phil Cassidy": {
+				"Gun Runner": false,
+				"Boomshine Saigon": false
+			},
+			"Assassination Missions": {
+				"Road Kill": false,
+				"Waste the Wife": false,
+				"Autocide": false,
+				"Check Out at the Check-In": false,
+				"Loose Ends": false
+			},
+			"R3 Missions": {
+				"Pizza Boy (Complete level 10)": false,
+				"Fire Truck (Complete level 12)": false,
+				"Paramedic (Complete level 12)": false,
+				"Vigilante (Complete level 12)": false,
+				"Taxi (Complete 100 Fares)": false
+			},
+			"Robbing Stores": {
+				"Bunch of Tools - Washington Beach": false,
+				"Jewellery Shop - Vice Point": false,
+				"Corner Shop - Vice Point": false,
+				"Pharmacy - Vice Point": false,
+				"Jewellery - North Point Mall": false,
+				"Bunch of Tools - North Point Mall": false,
+				"Gash - North Point Mall": false,
+				"Music Shop - North Point Mall": false,
+				"Donut Shop - Little Havana": false,
+				"Screw This - Little Havana": false,
+				"Café Robina - Little Havana": false,
+				"Laundromat - Little Havana": false,
+				"Ryton Aide Pharmacy - Little Haiti": false,
+				"Jewellery Shop - Downtown": false,
+				"Pharmacy - Downtown": false
+			}
+		},
+		"Properties/Assets": {
+			"Properties": {
+				"3321 Vice Point - $2,500": false,
+				"1102 Washington Street - $3,000": false,
+				"Links View Apartments - $6,000": false,
+				"Ocean Heights - $7,000": false,
+				"El Swanko Casa - $8,000": false,
+				"Skumhole Shack - $1,000": false,
+				"Hyman Condo - $14,000": false
+			},
+			"Boatyard": {
+				"Checkpoint Charlie": false
+			},
+			"Cherry Poppers": {
+				"Distribution (Sell 50 'Ice Creams' in one run)": false
+			},
+			"Pole Position Club": {
+				"Spend $600 on the dancer in the back": false
+			},
+			"Kaufman Cabs": {
+				"V.I.P": false,
+				"Friendly Rivalry": false,
+				"Cabmageddon": false
+			},
+			"Sunshine Auto's - List 1": {
+				"Landstalker": false,
+				"Idaho": false,
+				"Esperanto": false,
+				"Stallion": false,
+				"Rancher": false,
+				"Blista Compact": false
+			}, 
+			"Sunshine Auto's - List 2": {
+				"Sabre": false,
+				"Virgo": false,
+				"Sentinel": false,
+				"Stretch": false,
+				"Washington": false,
+				"Admiral": false
+			},
+			"Sunshine Auto's - List 3": {
+				"Cheetah": false,
+				"Infernus": false,
+				"Banshee": false,
+				"Phoenix": false,
+				"Comet": false,
+				"Stinger": false
+			},
+			"Sunshine Auto's - List 4": {
+				"Voodoo": false,
+				"Cuban Hermes": false,
+				"Caddy": false,
+				"Baggage Handler": false,
+				"Mr. Whoopee": false,
+				"Pizza Boy": false
+			},
+			"Sunshine Auto's - Races": {
+				"Terminal Velocity": false,
+				"Ocean Drive": false,
+				"Border Run": false,
+				"Capital Cruise": false,
+				"Tour!": false,
+				"V.C. Endurance": false
+			},
+			"Film Studio": {
+				"Recruitment Drive": false,
+				"Dildo Dodo": false,
+				"Martha's Mug Shot": false,
+				"G-Spotlight": false
+			},
+			"Print Works": {
+				"Spilling The Beans": false,
+				"Hit the Courier": false
+			}, 
+			"The Malibu": {
+				"No Escape?": false,
+				"The Shootist": false,
+				"The Driver": false,
+				"The Job": false
+			}
+		},
+		"Challenges": {
+			"Vehicle Missions": {
+				"Cone Crazy": false,
+				"PCJ Playground": false,
+				"Trial By Dirt": false,
+				"Test Track": false
+			},
+			"Chopper Checkpoints": {
+				"Ocean Beach": false,
+				"Vice Point": false,
+				"Little Haiti": false,
+				"Downtown": false
+			},
+			"Top Fun": {
+				"RC Baron - Top of North Point Mall": false,
+				"RC Bandit - Vice Point": false,
+				"RC Raider - Escobar International": false
+			},
+			"Hyman Stadium Events": {
+				"Bloodring": false,
+				"Dirtring": false,
+				"Hotring": false
+			},
+			"Shooting Range": {
+				"45 or more points": false
+			}
+		},
+		"Collectibles": {
+			"35 Rampages": {
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false,
+				"5": false,
+				"6": false,
+				"7": false,
+				"8": false,
+				"9": false,
+				"10": false,
+				"11": false,
+				"12": false,
+				"13": false,
+				"14": false,
+				"15": false,
+				"16": false,
+				"17": false,
+				"18": false,
+				"19": false,
+				"20": false,
+				"21": false,
+				"22": false,
+				"23": false,
+				"24": false,
+				"25": false,
+				"26": false,
+				"27": false,
+				"28": false,
+				"29": false,
+				"30": false,
+				"31": false,
+				"32": false,
+				"33": false,
+				"34": false,
+				"35": false
+			},
+			"36 Unique Jumps": {
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false,
+				"5": false,
+				"6": false,
+				"7": false,
+				"8": false,
+				"9": false,
+				"10": false,
+				"11": false,
+				"12": false,
+				"13": false,
+				"14": false,
+				"15": false,
+				"16": false,
+				"17": false,
+				"18": false,
+				"19": false,
+				"20": false,
+				"21": false,
+				"22": false,
+				"23": false,
+				"24": false,
+				"25": false,
+				"26": false,
+				"27": false,
+				"28": false,
+				"29": false,
+				"30": false,
+				"31": false,
+				"32": false,
+				"33": false,
+				"34": false,
+				"35": false,
+				"36": false
+			}, 
+			"100 Hidden Packages": {
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false,
+				"5": false,
+				"6": false,
+				"7": false,
+				"8": false,
+				"9": false,
+				"10": false,
+				"11": false,
+				"12": false,
+				"13": false,
+				"14": false,
+				"15": false,
+				"16": false,
+				"17": false,
+				"18": false,
+				"19": false,
+				"20": false,
+				"21": false,
+				"22": false,
+				"23": false,
+				"24": false,
+				"25": false,
+				"26": false,
+				"27": false,
+				"28": false,
+				"29": false,
+				"30": false,
+				"31": false,
+				"32": false,
+				"33": false,
+				"34": false,
+				"35": false,
+				"36": false,
+				"37": false,
+				"38": false,
+				"39": false,
+				"40": false,
+				"41": false,
+				"42": false,
+				"43": false,
+				"44": false,
+				"45": false,
+				"46": false,
+				"47": false,
+				"48": false,
+				"49": false,
+				"50": false,
+				"51": false,
+				"52": false,
+				"53": false,
+				"54": false,
+				"55": false,
+				"56": false,
+				"57": false,
+				"58": false,
+				"59": false,
+				"60": false,
+				"61": false,
+				"62": false,
+				"63": false,
+				"64": false,
+				"65": false,
+				"66": false,
+				"67": false,
+				"68": false,
+				"69": false,
+				"70": false,
+				"71": false,
+				"72": false,
+				"73": false,
+				"74": false,
+				"75": false,
+				"76": false,
+				"77": false,
+				"78": false,
+				"79": false,
+				"80": false,
+				"81": false,
+				"82": false,
+				"83": false,
+				"84": false,
+				"85": false,
+				"86": false,
+				"87": false,
+				"88": false,
+				"89": false,
+				"90": false,
+				"91": false,
+				"92": false,
+				"93": false,
+				"94": false,
+				"95": false,
+				"96": false,
+				"97": false,
+				"98": false,
+				"99": false,
+				"100": false
+			}
+		}
+
+	}
+}
