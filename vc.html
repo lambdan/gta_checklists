@@ -5,35 +5,47 @@
 <title>GTA VC 100% Checklist</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
 <script src="vc_check.js"></script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="custom.css">
 <style></style>
 
 </head>
 
-<body onload="reset()">
+<body>
 <div class="container">
 <h1>GTA Vice City 100% Checklist</h1>
 
-
-<h3>Load from: <a href="#" onclick="load();">Cache</a> or <a href="#" onclick="load_man();">Code</a></h3>
-<h3>Save to: <a href="#" onclick="save();">Cache</a> or <a href="#" onclick="save_man();">Code</a></h3>
+<div class="btn-toolbar" role="toolbar">
+	<div class="btn-group" role="group">
+<a href="#" class="btn btn-success" role="button" onclick="save();">Save</a>
+<a href="#" class="btn btn-warning" role="button" onclick="load();">Load</a>
+</div>
+<div class="btn-group" role="group">
+<a href="#" class="btn btn-success" role="button" onclick="save_man();">Save (Manual)</a>
+<a href="#" class="btn btn-warning" role="button" onclick="load_man();">Load (Manual)</a></div>
+</div>
+<br>
+<div id="info"></div>
 
 <div id="percent">
 	<h2>0%</h2>
 </div>
 
-<div id="info"></div>
+
 
 <form class="checklist"></form>
 
-<p>100% checklist from <a href="http://www.g-unleashed.com/index.php?cat=15&pid=332&page=100%27">G-Unleashed</a>.</p>
+<p>100% checklist from <a href="http://www.g-unleashed.com/index.php?cat=15&pid=332&page=100%27">G-Unleashed</a> + some adjustments by me.</p>
 <p>Data saves to your browsers storage, cleaning cache or going incognito might wipe them! Be aware!</p>
+<p>Using the Manual option gives you a code you can copy and paste between devices. It's more work, but it's safer.</p>
 
-<a href="#" onclick="reset();">Reset</a><br>
-
+<a href="#" class="btn btn-danger" role="button" onclick="reset();">Reset</a>
+<br><br>
 </div>
 </body>
 

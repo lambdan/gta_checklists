@@ -1,0 +1,3 @@
+.btn { /* add some margin to button tops to avoid clipping on phone */
+  margin-top: 3px;
+}

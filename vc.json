@@ -204,7 +204,7 @@
 			}
 		},
 		"Collectibles": {
-			"35 Rampages": {
+			"Rampages": {
 				"1": false,
 				"2": false,
 				"3": false,
@@ -241,7 +241,7 @@
 				"34": false,
 				"35": false
 			},
-			"36 Unique Jumps": {
+			"Unique Jumps": {
 				"1": false,
 				"2": false,
 				"3": false,
@@ -279,7 +279,7 @@
 				"35": false,
 				"36": false
 			}, 
-			"100 Hidden Packages": {
+			"Hidden Packages": {
 				"1": false,
 				"2": false,
 				"3": false,
