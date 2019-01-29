@@ -30,11 +30,13 @@ function populate_checklist(json) {
 				//output.push('<div class="progress"><div class="progress-bar" role="progressbar" style="width: 33%">0 / 4</div></div>');
 				output.push('</div>'); // card header
 				output.push('<div id="' + ('div'+name).replace(/\s+/g, '') + '" ');
+				output.push('class="show');
+				/*
 				if (total == done) { // all tasks done, can collapse
 					output.push('class="collapse"');
 				} else {
 					output.push('class="show');
-				}
+				}*/
 				output.push(' aria-labelledby="' + ('header'+name).replace(/\s+/g, '') + '" data-parent="#' + ('accordion'+category).replace(/\s+/g, '') + '">');
 				output.push('<div class="card-body">');
 				$.each(mission, function(mission_name, status) {
