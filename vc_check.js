@@ -147,7 +147,7 @@ function current_percentage() {
 }
 
 function update_shown_percentage(current, min, max) {
-	$("#percent").html('<div class="progress"><div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="' + current + '" aria-valuemin="' + min + '" aria-valuemax="' + max + '" style="width: ' + current + '%;background-color:#F27DFD !important;color:black;">Game Completion: ' + current + '%</div></div>');
+	$("#percent").html('<div class="progress" style="height:30px;"><div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="' + current + '" aria-valuemin="' + min + '" aria-valuemax="' + max + '" style="width: ' + current + '%;background-color:#F27DFD !important;">' + current + '%</div></div>');
 }
 
 function buildInputObject(arr, val) { // https://stackoverflow.com/a/35689636/1172196
