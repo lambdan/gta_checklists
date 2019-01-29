@@ -145,7 +145,7 @@ function percentage() {
 }
 
 function update_shown_percentage() {
-	$("#percent").html('<div class="progress"><div class="progress-bar" role="progressbar" style="width: ' + percentage() + ';background-color:#F27DFD !important">' + percentage() + '</div></div>');
+	$("#percent").html('<div class="progress"><div class="progress-bar progress-bar-striped" role="progressbar" style="width: ' + percentage() + ';background-color:#F27DFD !important">' + percentage() + '</div></div>');
 }
 
 function buildInputObject(arr, val) { // https://stackoverflow.com/a/35689636/1172196
