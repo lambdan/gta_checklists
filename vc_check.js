@@ -1,10 +1,10 @@
 var json_history = [];
 
+function update_text_test() {
+	$("#header-0-0").html("hi");
+}
+
 function populate_checklist(json) {
-	//json_history.push(json);
-	//console.log("populate_checklist");
-	//console.log(json);
-	//diff_json(current_json(), json);
 	$(".checklist").empty();
 	var output = []; // html output
 	//output.push('<div class="form-group">');
@@ -23,7 +23,7 @@ function populate_checklist(json) {
 			output.push('</h5>');
 			output.push('</div>'); // card header
 			output.push('<div id="' + ('card-' + game_id +'-' + category_id) + '" ');
-			output.push('class="show');
+			output.push('class="show"');
 			output.push(' aria-labelledby="' + ('header-' + game_id + '-' +category_id) + '" data-parent="#' + ('accordion-' + game_id + '-' +category_id) + '">');
 			output.push('<div class="card-body">');
 			output.push('<div class="accordion" id="' + ('accordion-' + game_id + '-' +category_id) + '">');
@@ -35,28 +35,13 @@ function populate_checklist(json) {
 				output.push('<h5 class="mb-0">');
 				output.push('<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '" aria-expanded="false" aria-controls="' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '">');
 				output.push(name);
-				// calculate progress
-				total = 0
-				done = 0
-				$.each(mission, function(mission_name, status) {
-					if (status==true) {
-						done += 1
-					}
-					total += 1
-				});
-				output.push(' (' + done + '/' + total + ')');
+				output.push('<span id="checklist-category-tasks"> (0/0)</span>');
 				output.push('</button>');
 				output.push('</h5>');
 				//output.push('<div class="progress"><div class="progress-bar" role="progressbar" style="width: 33%">0 / 4</div></div>');
 				output.push('</div>'); // card header
 				output.push('<div id="' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '" ');
-				//output.push('class="show');
-				
-				if (total == done) { // all tasks done, can collapse
-					output.push('class="collapse"');
-				} else {
-					output.push('class="show');
-				}
+				output.push('class="show category-body"');
 				output.push(' aria-labelledby="' + ('header-' + game_id + '-' + category_id + '-' +name_id) + '" data-parent="#' + ('accordion-' + game_id + '-' +category_id) + '">');
 				output.push('<div class="card-body">');
 				mission_id = 0;
@@ -65,9 +50,9 @@ function populate_checklist(json) {
 					element = ('task-' + game_id + '-' + category_id + '-' +name_id + '-' + mission_id);
 					//id2 = btoa(id); // for "for" bootstrap targets
 					if (status == true) {
-						output.push('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" name="' + id + '" checked id="' + element +'"><label class="form-check-label" for="' + element +'">' + mission_name + '</label></div>');
+						output.push('<div class="form-check form-check-inline"><input class="form-check-input checklist-task" type="checkbox" name="' + id + '" checked id="' + element +'"><label class="form-check-label" for="' + element +'">' + mission_name + '</label></div>');
 					} else {
-						output.push('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" name="' + id + '" id="' + element + '"><label class="form-check-label" for ="' + element + '">' + mission_name + '</label></div>');
+						output.push('<div class="form-check form-check-inline"><input class="form-check-input checklist-task" type="checkbox" name="' + id + '" id="' + element + '"><label class="form-check-label" for ="' + element + '">' + mission_name + '</label></div>');
 					}
 					mission_id += 1;
 				})
@@ -88,6 +73,7 @@ function populate_checklist(json) {
 	//output.push('</div>'); // the form group
 	$(".checklist").html(output.join(''));
 	update_shown_percentage(current_percentage(), 0, 100);
+	update();
 }
 
 function current_json() {
@@ -173,10 +159,8 @@ function current_percentage() {
 	} else {
 		percent = ((done/total) * 100).toFixed(0);
 	}
-	//$("#percent").html("<h2>" + percent + "</h2>");
 	return percent;
 
-	//save_data = data.task;
 }
 
 function update_shown_percentage(current, min, max) {
@@ -202,10 +186,11 @@ function buildInputObject(arr, val) { // https://stackoverflow.com/a/35689636/11
 }
 
 function add_to_history() {
+	// push current json to "history" so we can undo back to it later 
 	curr = current_json(); // .push(current_json()) pushes the function apparently
 	json_history.push(curr);
 
-	//console.log(json_history);
+	// maybe we can diff to see what was changed?
 	/*
 	if (json_history[json_history.length-1] != null && json_history[json_history.length-2] != null) { 
 		diff = filter(json_history[json_history.length-2], json_history[json_history.length-1]);
@@ -215,7 +200,6 @@ function add_to_history() {
 }
 
 function undo() {
-	//console.log("undo");
 	if (json_history[json_history.length-2] == null) {
 		alert("Can't go back any further");
 	} else {
@@ -238,13 +222,38 @@ function filter(obj1, obj2) { // https://stackoverflow.com/a/8432188/1172196
     return result;
 }
 
+function update() {
+	
+	$('.card').each(function() {
+		checkboxes = $(this).find('.checklist-task');
+		section_total = checkboxes.length;
+		section_done = 0;
+
+		$.each(checkboxes, function() {
+			if (this.checked) {
+				section_done += 1
+			}
+		});
+
+		// update 0/x next to category
+		$(this).find('#checklist-category-tasks').html(' (' + section_done + '/' + section_total + ')');
+
+		// collapse card if all done
+		if (section_total == section_done) {
+			$(this).find('.category-body').addClass('collapse').removeClass('show');
+		}
+		//$(this).find('.category-body').attr("class"). // useful for finding divs
+	});
+}
+
+$(document).on('click', '.checklist-task', function () { // detect when a box is clicked
+	update();
+});
+
 $(document).ready(function() {
 	reset(); // load default json
-	//add_to_history();
     $(".checklist").change(function() {
-    	populate_checklist(current_json()); // needs to be fixed asap, as the accordions show/collapse constantly 
     	add_to_history();
     	update_shown_percentage(current_percentage(), 0, 100);
     });
 });
-
