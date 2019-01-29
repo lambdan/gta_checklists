@@ -199,7 +199,7 @@ function add_to_history() {
 	*/
 }
 
-function undo() {
+function undo() { // very glitchy, needs work
 	if (json_history[json_history.length-2] == null) {
 		alert("Can't go back any further");
 	} else {
