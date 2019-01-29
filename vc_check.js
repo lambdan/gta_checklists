@@ -55,7 +55,7 @@ function populate_checklist(json) {
 	});
 	//output.push('</div>'); // the form group
 	$(".checklist").html(output.join(''));
-	update_shown_percentage();
+	update_shown_percentage(current_percentage(), 0, 100);
 }
 
 function current_json() {
@@ -84,13 +84,13 @@ function save() { // save to cache
 	save_data = current_json();
 	localStorage.setItem('gta_checklists_vc', JSON.stringify(save_data));
 	console.log(save_data);
-	$("#info").html('<p>Saved ' + percentage() + ' at ' + new Date().toLocaleString() + '</p>');
+	$("#info").html('<p>Saved ' + current_percentage() + '% at ' + new Date().toLocaleString() + '</p>');
 }
 
 function save_man() {
 	save_data = current_json();
 	var encoded = btoa(JSON.stringify(save_data));
-	$('#info').html('<div class="form-group"><p>Heres your code for your ' + percentage() + ' completion:<br><textarea class="form-control" cols="40" rows="10" style="font-family:monospace" readonly>' + encoded + '</textarea><br>Copy and save it somewhere safe<br><br><a href="#" class="btn btn-primary" role="button" onclick="clear_info();">OK</a></p></div><br>');
+	$('#info').html('<div class="form-group"><p>Heres your code for your ' + current_percentage() + '% completion:<br><textarea class="form-control" cols="40" rows="10" style="font-family:monospace" readonly>' + encoded + '</textarea><br>Copy and save it somewhere safe<br><br><a href="#" class="btn btn-primary" role="button" onclick="clear_info();">OK</a></p></div><br>');
 }
 
 function load() { // load from cache
@@ -98,7 +98,7 @@ function load() { // load from cache
 	var retrievedObject = localStorage.getItem('gta_checklists_vc');
 	json = JSON.parse(retrievedObject);
 	populate_checklist(json);
-	$('#info').html('<p>Loaded ' + percentage() + '</p>');
+	$('#info').html('<p>Loaded ' + current_percentage() + '%</p>');
 }
 
 function load_man() {
@@ -107,7 +107,7 @@ function load_man() {
 		$(".checklist").empty();
 		json = JSON.parse(atob(code));
 		populate_checklist(json);
-		$('#info').html('<p>Loaded ' + percentage() + '</p>');
+		$('#info').html('<p>Loaded ' + current_percentage() + '%</p>');
 	} else {
 		alert("Did not load");
 	}
@@ -117,7 +117,7 @@ function clear_info() {
 	$("#info").empty();
 }
 
-function percentage() {
+function current_percentage() {
 	done = 0;
 	total = 0;
 	values = jQuery(".checklist").serializeArray();
@@ -134,9 +134,9 @@ function percentage() {
 			});
 
 	if (done == 0 || total == 0) {
-		percent = "0%"
+		percent = 0
 	} else {
-		percent = ((done/total) * 100).toFixed(0) + '%'
+		percent = ((done/total) * 100).toFixed(0);
 	}
 	//$("#percent").html("<h2>" + percent + "</h2>");
 	return percent;
@@ -144,8 +144,8 @@ function percentage() {
 	//save_data = data.task;
 }
 
-function update_shown_percentage() {
-	$("#percent").html('<div class="progress"><div class="progress-bar progress-bar-striped" role="progressbar" style="width: ' + percentage() + ';background-color:#F27DFD !important">' + percentage() + '</div></div>');
+function update_shown_percentage(current, min, max) {
+	$("#percent").html('<div class="progress"><div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="' + current + '" aria-valuemin="' + min + '" aria-valuemax="' + max + '" style="width: ' + current + '%;background-color:#F27DFD !important;color:black;">Game Completion: ' + current + '%</div></div>');
 }
 
 function buildInputObject(arr, val) { // https://stackoverflow.com/a/35689636/1172196
@@ -170,6 +170,6 @@ $(document).ready(function() {
 	reset(); // load default json
     $(".checklist").change(function() {
     	populate_checklist(current_json());
-    	update_shown_percentage();
+    	update_shown_percentage(current_percentage(), 0, 100);
     });
 });
