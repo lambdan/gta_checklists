@@ -15,6 +15,7 @@ function populate_checklist(json) {
 			output.push('<h5 class="mb-0">');
 			output.push('<button class="btn btn-link category-btn" type="button" data-toggle="collapse" data-target="#' + ('card-' + game_id +'-' + category_id) + '" aria-expanded="false" aria-controls="' + ('card-' + game_id +'-' + category_id) + '">');
 			output.push(category);
+			output.push('<span id="checklist-category-tasks"> (0/0)</span>');
 			output.push('</button>');
 			output.push('</h5>');
 			output.push('</div>'); // card header
@@ -219,7 +220,6 @@ function filter(obj1, obj2) { // https://stackoverflow.com/a/8432188/1172196
 }
 
 function update() {
-	
 	$('.card').each(function() {
 		checkboxes = $(this).find('.checklist-task');
 		section_total = checkboxes.length;
