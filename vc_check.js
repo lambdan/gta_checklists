@@ -241,8 +241,11 @@ function update() {
 		// collapse card and add bg color if all done
 		if (section_total == section_done) {
 			$(this).find('.category-body').addClass('collapse').removeClass('show');
-			$(this).find('.category-header').addClass('bg-success');
+			$(this).find('.category-header').addClass('bg-primary');
 			$(this).find('.category-btn').addClass('text-white');
+		} else { // remove the classes if  theyre not all done (eg you mark all missions, then undo something)
+			$(this).find('.category-header').removeClass('bg-primary');
+			$(this).find('.category-btn').removeClass('text-white');
 		}
 		//$(this).find('.category-body').attr("class"). // useful for finding divs
 	});
