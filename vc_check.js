@@ -3,7 +3,6 @@ var json_history = [];
 function populate_checklist(json) {
 	$(".checklist").empty();
 	var output = []; // html output
-	//output.push('<div class="form-group">');
 	game_id = 0;
 	$.each(json, function(game, category) {
 		category_id = 0;
@@ -11,63 +10,59 @@ function populate_checklist(json) {
 		$.each(category, function(category, missiongiver) {
 			//output.push('<h2>' + category + '</h2>'); // story missions etc
 			output.push('<div class="card">');
-			output.push('<div class="card-header category-header" id="' + ('header-'+ game_id + '-' +category_id) +'">');
-			output.push('<h5 class="mb-0">');
-			output.push('<button class="btn btn-link category-btn" type="button" data-toggle="collapse" data-target="#' + ('card-' + game_id +'-' + category_id) + '" aria-expanded="false" aria-controls="' + ('card-' + game_id +'-' + category_id) + '">');
-			output.push(category);
-			output.push('<span id="checklist-category-tasks"> (0/0)</span>');
-			output.push('</button>');
-			output.push('</h5>');
-			output.push('</div>'); // card header
-			output.push('<div id="' + ('card-' + game_id +'-' + category_id) + '" ');
-			output.push('class="collapse game-body"');
-			output.push(' aria-labelledby="' + ('header-' + game_id + '-' +category_id) + '" data-parent="#' + ('accordion-' + game_id + '-' +category_id) + '">');
-			output.push('<div class="card-body">');
-			output.push('<div class="accordion" id="' + ('accordion-' + game_id + '-' +category_id) + '">');
-			name_id = 0;
-			$.each(missiongiver, function(name, mission) {
-				//output.push('<h3>' + name + '</h3>'); // ken rosenberg etc
-				output.push('<div class="card">');
-				output.push('<div class="card-header category-header" id="' + ('header-' + game_id + '-' + category_id + '-' +name_id) +'">');
-				output.push('<h5 class="mb-0">');
-				output.push('<button class="btn btn-link category-btn" type="button" data-toggle="collapse" data-target="#' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '" aria-expanded="false" aria-controls="' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '">');
-				output.push(name);
-				output.push('<span id="checklist-category-tasks"> (0/0)</span>');
-				output.push('</button>');
-				output.push('</h5>');
-				//output.push('<div class="progress"><div class="progress-bar" role="progressbar" style="width: 33%">0 / 4</div></div>');
+				output.push('<div class="card-header category-header" id="' + ('header-'+ game_id + '-' +category_id) +'">');
+					output.push('<h5 class="mb-0">');
+						output.push('<button class="btn btn-link category-btn" type="button" data-toggle="collapse" data-target="#' + ('card-' + game_id +'-' + category_id) + '" aria-expanded="false" aria-controls="' + ('card-' + game_id +'-' + category_id) + '">');
+							output.push(category);
+							output.push('<span id="checklist-category-tasks"> (0/0)</span>');
+						output.push('</button>');
+					output.push('</h5>');
 				output.push('</div>'); // card header
-				output.push('<div id="' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '" ');
-				output.push('class="collapse category-body"');
-				output.push(' aria-labelledby="' + ('header-' + game_id + '-' + category_id + '-' +name_id) + '" data-parent="#' + ('accordion-' + game_id + '-' +category_id) + '">');
-				output.push('<div class="card-body">');
-				mission_id = 0;
-				$.each(mission, function(mission_name, status) {
-					id = 'task[\'' + game + '\'][\'' + category + '\'][\'' + name + '\'][\'' + mission_name + '\']'; // used for json generation !!! dont touch
-					element = ('task-' + game_id + '-' + category_id + '-' +name_id + '-' + mission_id);
-					//id2 = btoa(id); // for "for" bootstrap targets
-					if (status == true) {
-						output.push('<div class="form-check form-check-inline"><input class="form-check-input checklist-task" type="checkbox" name="' + id + '" checked id="' + element +'"><label class="form-check-label" for="' + element +'">' + mission_name + '</label></div>');
-					} else {
-						output.push('<div class="form-check form-check-inline"><input class="form-check-input checklist-task" type="checkbox" name="' + id + '" id="' + element + '"><label class="form-check-label" for ="' + element + '">' + mission_name + '</label></div>');
-					}
-					mission_id += 1;
-				})
-				output.push('</div>'); // card body
-				output.push('</div>'); // the div class collape show ...
-				output.push('</div>'); // the card
-				name_id += 1;
-			})
-			output.push('</div>'); // the category accordion
-			output.push('</div>'); // card body
-			output.push('</div>'); // the div class collape show ...
+				output.push('<div id="' + ('card-' + game_id +'-' + category_id) + '" ');
+				output.push('class="collapse game-body"');
+				output.push(' aria-labelledby="' + ('header-' + game_id + '-' +category_id) + '" data-parent="#' + ('accordion-' + game_id + '-' +category_id) + '">');
+					output.push('<div class="card-body">');
+						output.push('<div class="accordion" id="' + ('accordion-' + game_id + '-' +category_id) + '">');
+						name_id = 0;
+						$.each(missiongiver, function(name, mission) {
+							output.push('<div class="card">');
+								output.push('<div class="card-header category-header" id="' + ('header-' + game_id + '-' + category_id + '-' +name_id) +'">');
+									output.push('<h5 class="mb-0">');
+										output.push('<button class="btn btn-link category-btn" type="button" data-toggle="collapse" data-target="#' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '" aria-expanded="false" aria-controls="' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '">');
+											output.push(name);
+											output.push('<span id="checklist-category-tasks"> (0/0)</span>');
+										output.push('</button>');
+									output.push('</h5>');
+								output.push('</div>'); // card header
+								output.push('<div id="' + ('card-' + game_id + '-' + category_id + '-' +name_id) + '" ');
+								output.push('class="collapse category-body"');
+								output.push(' aria-labelledby="' + ('header-' + game_id + '-' + category_id + '-' +name_id) + '" data-parent="#' + ('accordion-' + game_id + '-' +category_id) + '">');
+								output.push('<div class="card-body">');
+									mission_id = 0;
+									$.each(mission, function(mission_name, status) {
+										id = 'task[\'' + game + '\'][\'' + category + '\'][\'' + name + '\'][\'' + mission_name + '\']'; // dont touch !!! used for json generation
+										element = ('task-' + game_id + '-' + category_id + '-' +name_id + '-' + mission_id);
+										if (status == true) {
+											output.push('<div class="form-check form-check-inline"><input class="form-check-input checklist-task" type="checkbox" name="' + id + '" checked id="' + element +'"><label class="form-check-label" for="' + element +'">' + mission_name + '</label></div>');
+										} else {
+											output.push('<div class="form-check form-check-inline"><input class="form-check-input checklist-task" type="checkbox" name="' + id + '" id="' + element + '"><label class="form-check-label" for ="' + element + '">' + mission_name + '</label></div>');
+										}
+										mission_id += 1;
+									})
+								output.push('</div>'); // card body
+							output.push('</div>'); // the card
+							output.push('</div>'); // ?
+							name_id += 1;
+						})
+						output.push('</div>'); // the category accordion
+					output.push('</div>'); // card body
+				output.push('</div>'); // the div card
 			output.push('</div>'); // the card
 			category_id += 1;
 		})
 		output.push('</div>'); // the game accordion
 		game_id += 1;
 	});
-	//output.push('</div>'); // the form group
 	$(".checklist").html(output.join(''));
 	update_shown_percentage(current_percentage(), 0, 100);
 	update();
