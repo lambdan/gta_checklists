@@ -1,9 +1,5 @@
 var json_history = [];
 
-function update_text_test() {
-	$("#header-0-0").html("hi");
-}
-
 function populate_checklist(json) {
 	$(".checklist").empty();
 	var output = []; // html output
