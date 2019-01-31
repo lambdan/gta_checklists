@@ -149,7 +149,7 @@ function current_percentage() {
 	if (done == 0 || total == 0) {
 		percent = 0
 	} else {
-		percent = ((done/total) * 100).toFixed(0);
+		percent = Math.floor( (done/total) * 100 );
 	}
 	return percent;
 
