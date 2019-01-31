@@ -1,4 +1,18 @@
+
+// global vars
 var json_history = [];
+var game_json_file;
+var game_save_name;
+var game_color;
+
+
+function set_game(json_filename, save_name, color) {
+	game_json_file = json_filename; // vc.json
+	game_save_name = save_name; // gta_checklists_vc
+	game_color = color; // #f27dfd
+	//console.log(game_json_file, game_save_name, game_color);
+	reset();
+}
 
 function populate_checklist(json) {
 	$(".checklist").empty();
@@ -85,7 +99,7 @@ function current_json() {
 function reset() {
 	$(".checklist").empty();
 	$("#info").empty();
-	$.getJSON('vc.json', function(json) {
+	$.getJSON(game_json_file, function(json) {
 		populate_checklist(json);
 		add_to_history(); // ugly hack to make json_history[0] the default values, will likely cause issues in the future if we add auto load 
 	});
@@ -93,8 +107,8 @@ function reset() {
 
 function save() { // save to cache
 	save_data = current_json();
-	localStorage.setItem('gta_checklists_vc', JSON.stringify(save_data));
-	console.log(save_data);
+	localStorage.setItem(game_save_name, JSON.stringify(save_data));
+	//console.log(save_data);
 	$("#info").html('<p>Saved ' + current_percentage() + '% at ' + new Date().toLocaleString() + '</p>');
 }
 
@@ -106,7 +120,7 @@ function save_man() {
 
 function load() { // load from cache
 	$(".checklist").empty();
-	var retrievedObject = localStorage.getItem('gta_checklists_vc');
+	var retrievedObject = localStorage.getItem(game_save_name);
 	json = JSON.parse(retrievedObject);
 	populate_checklist(json);
 	add_to_history();
@@ -156,7 +170,7 @@ function current_percentage() {
 }
 
 function update_shown_percentage(current, min, max) {
-	$("#percent").html('<div class="progress" style="height:30px;"><div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="' + current + '" aria-valuemin="' + min + '" aria-valuemax="' + max + '" style="width: ' + current + '%;background-color:#F27DFD !important;">' + current + '%</div></div>');
+	$("#percent").html('<div class="progress" style="height:30px;"><div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="' + current + '" aria-valuemin="' + min + '" aria-valuemax="' + max + '" style="width: ' + current + '%;background-color:' + game_color + ' !important;">' + current + '%</div></div>');
 }
 
 function buildInputObject(arr, val) { // https://stackoverflow.com/a/35689636/1172196
@@ -242,13 +256,9 @@ function update() {
 	});
 }
 
-$(document).on('click', '.checklist-task', function () { // detect when a box is clicked
-	update();
-});
-
 $(document).ready(function() {
-	reset(); // load default json
     $(".checklist").change(function() {
+    	update();
     	add_to_history();
     	update_shown_percentage(current_percentage(), 0, 100);
     });
