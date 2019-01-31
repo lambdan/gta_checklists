@@ -7,9 +7,9 @@ var game_color;
 
 
 function set_game(json_filename, save_name, color) {
-	game_json_file = json_filename; // vc.json
-	game_save_name = save_name; // gta_checklists_vc
-	game_color = color; // #f27dfd
+	game_json_file = json_filename; // the json with all the data, example: vc.json
+	game_save_name = save_name; // the local storage name we save to, example: gta_checklists_vc
+	game_color = color; // the color of the progress bar, example: #f27dfd
 	//console.log(game_json_file, game_save_name, game_color);
 	reset();
 }
