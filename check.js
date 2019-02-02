@@ -166,7 +166,7 @@ function autoload() { // load from cache
 		add_to_history();
 		$('#info').html('<p>Auto-Loaded the Auto-Save with ' + current_percentage() + '%</p>');
 	} else if (localStorage.getItem(game_save_name) != null) {
-		var retrievedObject = localStorage.getItem(autosave_name);
+		var retrievedObject = localStorage.getItem(game_save_name);
 		json = JSON.parse(retrievedObject);
 		populate_checklist(json);
 		add_to_history();
