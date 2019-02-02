@@ -99,7 +99,6 @@ function current_json() {
 }
 
 function reset() {
-	$(".checklist").empty();
 	$.getJSON(game_json_file, function(json) {
 		populate_checklist(json);
 		add_to_history(); // ugly hack to make json_history[0] the default values, will likely cause issues in the future if we add auto load 
@@ -110,6 +109,7 @@ function reset() {
 function save() { // save to cache
 	save_data = current_json();
 	localStorage.setItem(game_save_name, JSON.stringify(save_data));
+	alert('Saved ' + current_percentage() + '% at ' + new Date().toLocaleString() + '');
 	$("#info").html('<p>Saved ' + current_percentage() + '% at ' + new Date().toLocaleString() + '</p>');
 }
 
@@ -124,27 +124,32 @@ function checklist_export() {
 
 function load() { // load from cache
 	if (localStorage.getItem(game_save_name) != null) {
-		$(".checklist").empty();
 		var retrievedObject = localStorage.getItem(game_save_name);
 		json = JSON.parse(retrievedObject);
 		populate_checklist(json);
 		add_to_history();
+		alert('Loaded ' + current_percentage() + '%');
 		$('#info').html('<p>Loaded ' + current_percentage() + '%</p>');
 	} else {
-		alert("Failed to load. Nothing seems to be saved...");
+		alert("Error: Failed to load. Nothing seems to be saved...");
 	}
 }
 
 function checklist_import() {
 	var code = prompt("Paste your code here:");
 	if (code != null) {
-		$(".checklist").empty();
-		json = JSON.parse(atob(code));
-		populate_checklist(json);
-		add_to_history();
-		$('#info').html('<p>Imported ' + current_percentage() + '%</p>');
-	} else {
-		alert("Did not load");
+		try {
+			json = JSON.parse(atob(code));
+			populate_checklist(json);
+			add_to_history();
+			alert("OK! Imported " + current_percentage() + "%");
+			$('#info').html('<p>Imported ' + current_percentage() + '%</p>');	
+		}
+		catch(e) {
+			alert("Error: code invalid.");
+		}
+	} else  {
+		alert("Import canceled.");
 	}
 }
 
@@ -155,14 +160,12 @@ function autosave() {
 }
 function autoload() { // load from cache
 	if (localStorage.getItem(autosave_name) != null) { // check if auto exists
-		$(".checklist").empty();
 		var retrievedObject = localStorage.getItem(autosave_name);
 		json = JSON.parse(retrievedObject);
 		populate_checklist(json);
 		add_to_history();
 		$('#info').html('<p>Auto-Loaded the Auto-Save with ' + current_percentage() + '%</p>');
 	} else if (localStorage.getItem(game_save_name) != null) {
-		$(".checklist").empty();
 		var retrievedObject = localStorage.getItem(autosave_name);
 		json = JSON.parse(retrievedObject);
 		populate_checklist(json);
