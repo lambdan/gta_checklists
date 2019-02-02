@@ -4,14 +4,16 @@ var json_history = [];
 var game_json_file;
 var game_save_name;
 var game_color;
+var autosave_name;
 
 
 function set_game(json_filename, save_name, color) {
 	game_json_file = json_filename; // the json with all the data, example: vc.json
 	game_save_name = save_name; // the local storage name we save to, example: gta_checklists_vc
 	game_color = color; // the color of the progress bar, example: #f27dfd
+	autosave_name = save_name + '_auto';
 	//console.log(game_json_file, game_save_name, game_color);
-	reset();
+	autoload();
 }
 
 function populate_checklist(json) {
@@ -98,24 +100,26 @@ function current_json() {
 
 function reset() {
 	$(".checklist").empty();
-	$("#info").empty();
 	$.getJSON(game_json_file, function(json) {
 		populate_checklist(json);
 		add_to_history(); // ugly hack to make json_history[0] the default values, will likely cause issues in the future if we add auto load 
 	});
+	$("#info").html("Checklist Reset! Start Playing!");
 }
 
 function save() { // save to cache
 	save_data = current_json();
 	localStorage.setItem(game_save_name, JSON.stringify(save_data));
-	//console.log(save_data);
 	$("#info").html('<p>Saved ' + current_percentage() + '% at ' + new Date().toLocaleString() + '</p>');
 }
 
-function save_man() {
+function checklist_export() {
 	save_data = current_json();
 	var encoded = btoa(JSON.stringify(save_data));
-	$('#info').html('<div class="form-group"><p>Heres your code for your ' + current_percentage() + '% completion:<br><textarea class="form-control" cols="40" rows="10" style="font-family:monospace" readonly>' + encoded + '</textarea><br>Copy and save it somewhere safe<br><br><a href="#" class="btn btn-primary" role="button" onclick="clear_info();">OK</a></p></div><br>');
+	// TODO this should be put in a modal: https://getbootstrap.com/docs/4.0/components/modal/
+	// using the percent div is a hack
+	$('#percent').html('<div class="form-group"><p>Heres your code for your ' + current_percentage() + '% completion:<br><textarea class="form-control" cols="40" rows="10" style="font-family:monospace" readonly>' + encoded + '</textarea><br>Copy and save it somewhere safe<br><br><a href="#" class="btn btn-primary" role="button" onclick="update();">OK</a></p></div>');
+	$('#info').html('<p>Exported ' + current_percentage() + '%</p>');
 }
 
 function load() { // load from cache
@@ -127,21 +131,42 @@ function load() { // load from cache
 	$('#info').html('<p>Loaded ' + current_percentage() + '%</p>');
 }
 
-function load_man() {
-	var code = prompt("Paste your save code here");
+function checklist_import() {
+	var code = prompt("Paste your code here:");
 	if (code != null) {
 		$(".checklist").empty();
 		json = JSON.parse(atob(code));
 		populate_checklist(json);
 		add_to_history();
-		$('#info').html('<p>Loaded ' + current_percentage() + '%</p>');
+		$('#info').html('<p>Imported ' + current_percentage() + '%</p>');
 	} else {
 		alert("Did not load");
 	}
 }
 
-function clear_info() {
-	$("#info").empty();
+function autosave() { 
+	save_data = current_json();
+	localStorage.setItem(autosave_name, JSON.stringify(save_data));
+	$("#info").html('<p>Auto-Saved ' + current_percentage() + '% at ' + new Date().toLocaleString() + '</p>');
+}
+function autoload() { // load from cache
+	if (localStorage.getItem(autosave_name) != null) { // check if auto exists
+		$(".checklist").empty();
+		var retrievedObject = localStorage.getItem(autosave_name);
+		json = JSON.parse(retrievedObject);
+		populate_checklist(json);
+		add_to_history();
+		$('#info').html('<p>Auto-Loaded the Auto-Save with ' + current_percentage() + '%</p>');
+	} else if (localStorage.getItem(game_save_name) != null) {
+		$(".checklist").empty();
+		var retrievedObject = localStorage.getItem(autosave_name);
+		json = JSON.parse(retrievedObject);
+		populate_checklist(json);
+		add_to_history();
+		$('#info').html('<p>Auto-Loaded the Manual Save with ' + current_percentage() + '%</p>');
+	} else {
+		reset();
+	}
 }
 
 function current_percentage() {
@@ -212,7 +237,7 @@ function undo() { // very glitchy, needs work
 		data = json_history[json_history.length-2]; // grab json
 		json_history.splice(-1, 1); // remove the latest json
 		populate_checklist(data);
-		$('#info').empty();
+		$('#info').html("Undo");
 	}
 }
 
@@ -254,12 +279,16 @@ function update() {
 		}
 		//$(this).find('.category-body').attr("class"). // useful for finding divs
 	});
+	update_shown_percentage(current_percentage(), 0, 100);
 }
 
 $(document).ready(function() {
     $(".checklist").change(function() {
     	update();
-    	add_to_history();
-    	update_shown_percentage(current_percentage(), 0, 100);
     });
+});
+
+$(document).on('click', '.checklist-task', function () { // detect when a box is clicked
+	autosave();
+	add_to_history();
 });

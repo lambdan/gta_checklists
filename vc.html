@@ -26,8 +26,8 @@
 		<a href="#" class="btn btn-light" role="button" onclick="load();">Load</a>
 	</div>
 	<div class="btn-group mr-2" role="group">
-		<a href="#" class="btn btn-primary" role="button" onclick="save_man();">Save (Manual)</a>
-		<a href="#" class="btn btn-light" role="button" onclick="load_man();">Load (Manual)</a>
+		<a href="#" class="btn btn-dark" role="button" onclick="checklist_export();">Export</a>
+		<a href="#" class="btn btn-light" role="button" onclick="checklist_import();">Import</a>
 	</div>
 </div>
 
@@ -36,19 +36,23 @@
 <a href="#" class="btn btn-warning" role="button" onclick="undo();">Undo</a>
 </div>
 -->
-<br>
-<div id="info"></div>
 
+<br>
 <div id="percent">
 </div>
 <br>
 <form class="checklist"></form>
 
+<div id="info" class="text-info"></div>
+
+<hr>
+
 <p>100% checklist from <a href="http://www.g-unleashed.com/index.php?cat=15&pid=332&page=100%27">G-Unleashed</a> + some adjustments by me.</p>
 <p>Data saves to your browsers storage, cleaning cache or going incognito might wipe them! Be aware!</p>
-<p>Using the Manual option gives you a code you can copy and paste between devices. It's more work, but it's safer.</p>
+<p>Every time you check a box it will autosave. It is recommended that you do a "manual save" everytime you save in-game, as you can then "manual load" if you would reload your save in-game.</p>
+<p>Using the Import/Export option gives you a code you can copy and paste between devices.</p>
 
-<a href="#" class="btn btn-danger" role="button" onclick="reset();">Reset</a>
+<a href="#" class="btn btn-danger" role="button" onclick="reset();">Reset Checklist</a>
 <br><br>
 </div>
 </body>
