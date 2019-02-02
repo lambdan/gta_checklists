@@ -123,12 +123,16 @@ function checklist_export() {
 }
 
 function load() { // load from cache
-	$(".checklist").empty();
-	var retrievedObject = localStorage.getItem(game_save_name);
-	json = JSON.parse(retrievedObject);
-	populate_checklist(json);
-	add_to_history();
-	$('#info').html('<p>Loaded ' + current_percentage() + '%</p>');
+	if (localStorage.getItem(game_save_name) != null) {
+		$(".checklist").empty();
+		var retrievedObject = localStorage.getItem(game_save_name);
+		json = JSON.parse(retrievedObject);
+		populate_checklist(json);
+		add_to_history();
+		$('#info').html('<p>Loaded ' + current_percentage() + '%</p>');
+	} else {
+		alert("Failed to load. Nothing seems to be saved...");
+	}
 }
 
 function checklist_import() {
