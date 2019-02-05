@@ -204,7 +204,7 @@ function current_percentage() {
 }
 
 function update_shown_percentage(current, min, max) {
-	$("#percent").html('<div class="progress" style="height:30px;"><div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="' + current + '" aria-valuemin="' + min + '" aria-valuemax="' + max + '" style="width: ' + current + '%;background-color:' + game_color + ' !important;">' + current + '%</div></div>');
+	$("#percent").html('<div class="progress" style="height:30px;"><div id="percentage-bar" class="progress-bar" role="progressbar" aria-valuenow="' + current + '" aria-valuemin="' + min + '" aria-valuemax="' + max + '" style="width: ' + current + '%;background-color:' + game_color + ' !important;">' + current + '%</div></div>');
 }
 
 function buildInputObject(arr, val) { // https://stackoverflow.com/a/35689636/1172196
@@ -263,6 +263,7 @@ function filter(obj1, obj2) { // https://stackoverflow.com/a/8432188/1172196
 }
 
 function update() {
+	update_shown_percentage(current_percentage(), 0, 100);
 	$('.card').each(function() {
 		checkboxes = $(this).find('.checklist-task');
 		section_total = checkboxes.length;
@@ -287,16 +288,13 @@ function update() {
 			$(this).find('.category-btn').removeClass('text-white');
 		}
 
-		// make sections green if 100% :)
+		// animate progress bar and make it striped when 100%
 		if (current_percentage() == 100) { 
-			$(this).find('.category-header').addClass('bg-success');
-			$(this).find('.category-header').removeClass('bg-primary'); // remove blue, doesnt seem necessary but feels better
-		} else {
-			$(this).find('.category-header').removeClass('bg-success');
+			$('#percent').find('.progress-bar').addClass('progress-bar-animated progress-bar-striped');
 		}
 		//$(this).find('.category-body').attr("class"). // useful for finding divs
 	});
-	update_shown_percentage(current_percentage(), 0, 100);
+	//update_shown_percentage(current_percentage(), 0, 100);
 }
 
 $(document).ready(function() {
