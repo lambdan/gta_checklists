@@ -286,6 +286,13 @@ function update() {
 			$(this).find('.category-header').removeClass('bg-primary');
 			$(this).find('.category-btn').removeClass('text-white');
 		}
+
+		// make sections green if 100% :)
+		if (current_percentage() == 100) { 
+			$(this).find('.category-header').addClass('bg-success');
+		} else {
+			$(this).find('.category-header').removeClass('bg-success');
+		}
 		//$(this).find('.category-body').attr("class"). // useful for finding divs
 	});
 	update_shown_percentage(current_percentage(), 0, 100);
