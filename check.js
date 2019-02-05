@@ -115,10 +115,11 @@ function save() { // save to cache
 
 function checklist_export() {
 	save_data = current_json();
-	var encoded = btoa(JSON.stringify(save_data));
+	//var encoded = btoa(JSON.stringify(save_data));
+	var encoded = JSON.stringify(save_data);
 	// TODO this should be put in a modal: https://getbootstrap.com/docs/4.0/components/modal/
 	// using the percent div is a hack
-	$('#percent').html('<div class="form-group"><p>Heres your code for your ' + current_percentage() + '% completion:<br><textarea class="form-control" cols="40" rows="10" style="font-family:monospace" readonly>' + encoded + '</textarea><br>Copy and save it somewhere safe<br><br><a href="#" class="btn btn-primary" role="button" onclick="update();">OK</a></p></div>');
+	$('#percent').html('<div class="form-group"><p>Heres your data for your ' + current_percentage() + '% completion:<br><textarea class="form-control export-box" cols="40" rows="10" style="font-family:monospace" readonly>' + encoded + '</textarea><br>Copy and save it somewhere safe<br><br><a href="#" class="btn btn-primary" role="button" onclick="update();">OK</a></p></div>');
 	$('#info').html('<p>Exported ' + current_percentage() + '%</p>');
 }
 
@@ -136,10 +137,11 @@ function load() { // load from cache
 }
 
 function checklist_import() {
-	var code = prompt("Paste your code here:");
+	var code = prompt("Paste your data here:");
 	if (code != null) {
 		try {
-			json = JSON.parse(atob(code));
+			//json = JSON.parse(atob(code));
+			json = JSON.parse(code);
 			populate_checklist(json);
 			add_to_history();
 			alert("OK! Imported " + current_percentage() + "%");
@@ -298,4 +300,12 @@ $(document).ready(function() {
 $(document).on('click', '.checklist-task', function () { // detect when a box is clicked
 	autosave();
 	add_to_history();
+});
+
+$(function (){ // select all text when focusing the export textarea
+    $(document).on("click", "textarea", function() { 
+    	//$(this).select();  // https://stackoverflow.com/a/35941346/1172196
+    	// fix for iOS:
+    	$(this)[0].setSelectionRange(0, 9999); // https://xomino.com/2015/02/13/mobile-web-app-usability-tip-selecting-all-text-when-clicking-on-an-input-field/
+    });
 });
