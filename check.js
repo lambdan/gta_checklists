@@ -148,7 +148,7 @@ function checklist_import() {
 			$('#info').html('<p>Imported ' + current_percentage() + '%</p>');	
 		}
 		catch(e) {
-			alert("Error: code invalid.");
+			alert("Error: code invalid. Try removing whitespace from the end of it.");
 		}
 	} else  {
 		alert("Import canceled.");
