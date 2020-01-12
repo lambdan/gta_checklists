@@ -1,0 +1,598 @@
+{
+	"SA": {
+		"Story Missions": {
+			"Los Santos: Intro": {
+				"Big Smoke": false,
+				"Ryder": false
+			}, 
+			"Los Santos: Sweet": {
+				"Tagging Up Turf": false,
+				"Cleaning The Hood": false,
+				"Drive-Thru": false,
+				"Nines And Ak's": false,
+				"Drive-By": false,
+				"Sweet's Girl": false,
+				"Cesar Vialpando": false,
+				"Doberman": false,
+				"Los Sepulcros": false,
+				"Reuniting The Families": false,
+				"The Green Sabre": false
+			},
+			"Los Santos: Cesar Vialpando": {
+				"High Stakes, Low Rider": false
+			},
+			"Los Santos: Ryder": {
+				"Home Invasion": false,
+				"Catalyst": false,
+				"Robbing Uncle Sam": false
+			},
+			"Los Santos: Big Smoke": {
+				"OG Loc": false,
+				"Running Dog": false,
+				"Wrong Side of the Tracks": false,
+				"Just Business": false
+			},
+			"Los Santos: OG Loc": {
+				"Life's A Beach": false,
+				"Madd Dogg's Rhymes": false,
+				"Management Issues": false,
+				"House Party": false
+			},
+			"Los Santos: C.R.A.S.H.": {
+				"Burning Desire": false,
+				"Gray Imports": false
+			},
+			"Badlands: C.R.A.S.H.": {
+				"Badlands": false
+			}, 
+			"Badlands: Catalina": {
+				"Tanker Commander": false,
+				"Local Liquor Store": false,
+				"Against All Odds": false,
+				"Small Town Bank": false
+			},
+			"Badlands: The Truth": {
+				"Body Harvest": false,
+				"Are You Going To San Fierro?": false
+			},
+			"Badlands: Cesar Vialpando": {
+				"King in Exile": false,
+				"Wu Zi Mu": false,
+				"Farewell, My Love...": false
+			},
+			"San Fierro: Garage": {
+				"Wear Flowers In Your Hair": false,
+				"555 WE TIP": false,
+				"Deconstruction": false,
+				"Photo Opportunity": false,
+				"Outrider": false,
+				"Snail Trail": false,
+				"Ice Cold Killa": false,
+				"Pier 69": false,
+				"Toreno's Last Flight": false,
+				"Yay Ka-Boom-Boom": false
+			},
+			"San Fierro: Jizzy": {
+				"Jizzy": false,
+				"T-Bone Mendez": false,
+				"Mike Toreno": false
+			},
+			"San Fierro: Woozie": {
+				"Mountain Cloud Boys": false,
+				"Ran Fa Li": false,
+				"Lure": false,
+				"Amphibious Assault": false,
+				"The Da Nang Thang": false
+			},
+			"Desert: Mike Toreno": {
+				"Monster": false,
+				"Highjack": false,
+				"Interdiction": false,
+				"Verdant Meadows": false
+			},
+			"Desert: Airfield": {
+				"Learning to Fly": false,
+				"N.O.E.": false,
+				"Stowaway": false,
+				"Black Project": false,
+				"Green Goo": false
+			},
+			"Las Venturas: The Four Dragons Casino": {
+				"Fender Ketchup": false,
+				"Explosive Situation": false,
+				"You've Had Your Chips": false,
+				"Don Peyote": false,
+				"Fish in a barrel": false,
+				"A home in the hills": false
+			}, 
+			"Las Venturas: Caligula's Casino": {
+				"Intensive Care": false,
+				"The Meat Business": false,
+				"Freefall": false,
+				"Saint Mark's Bistro": false
+			},
+			"Las Venturas: Madd Dogg": {
+				"Madd Dogg:": false
+			},
+			"Las Venturas: C.R.A.S.H.": {
+				"Misappropriation": false,
+				"High Noon": false
+			},
+			"Los Santos, Part 2: CJ": {
+				"Vertical Bird": false,
+				"Home Coming": false,
+				"Cut Throat Business": false,
+				"Riot": false
+			},
+			"Los Santos, Part 2: Sweet": {
+				"Beat Down On B Dup": false,
+				"Grove 4 Life": false,
+				"Los Desperados": false,
+				"End of the Line": false
+			}
+		},
+		"Side Missions": {
+			"Zero": {
+				"Air Raid": false,
+				"Supply Lines...": false,
+				"New Model Army": false
+			},
+			"Wang Cars": {
+				"Zeroing In": false,
+				"Test Drive": false,
+				"Customs Fast Track": false,
+				"Puncture Wounds": false
+			},
+			"Heist": {
+				"Architectural Espionage": false,
+				"Key to Her Heart": false,
+				"Dam and Blast": false,
+				"Cop Wheels": false,
+				"Up, Up and Away!": false,
+				"Breaking the Bank at Caligula's": false
+			},
+			"Trucker Missions": {
+				"Mission 1":false,
+				"Mission 2":false,
+				"Mission 3":false,
+				"Mission 4":false,
+				"Mission 5":false,
+				"Mission 6":false,
+				"Mission 7":false,
+				"Mission 8":false
+			},
+			"Quarry": {
+				"Mission 1":false,
+				"Mission 2":false,
+				"Mission 3":false,
+				"Mission 4":false,
+				"Mission 5":false,
+				"Mission 6":false,
+				"Mission 7":false
+			},
+			"R3 Missions": {
+				"50 Taxi Fares": false,
+				"Firefighter Level 12": false,
+				"Freight Missions Level 2": false,
+				"Paramedic Level 12": false,
+				"Pimping Level 10": false,
+				"Vigilante Level 12": false
+			},
+			"Courier Missions": {
+				"Roboi's Food Mart (Los Santos)": false,
+				"Hippy Shopper (San Fierro)": false,
+				"Burger Shot (Las Venturas)": false
+			},
+			"Walet Parking": {
+				"Complete Level 5": false
+			}
+
+		},
+		"Challenges and Schools": {
+			"Vehicle Challenges": {
+				"BMX": false,
+				"NRG-500": false
+			}, 
+			"Stadium Challenges": {
+				"8-Track": false,
+				"Blood Bowl": false,
+				"Dirt Track": false,
+				"Kick Start": false
+			},
+			"The Chiliad Challenges": {
+				"Scotch Bonnet Yellow Route": false,
+				"Birdseye Winder": false,
+				"Cobra Run": false
+			},
+			"Ammu-nation Challenges": {
+				"Pistol":false,
+				"Micro SMG":false,
+				"Shotgun":false,
+				"AK-47":false
+			},
+			"Schools (pass all tests)": {
+				"Bike School": false,
+				"Boat School": false,
+				"Driving School (required for Wang Cars missions)": false,
+				"Flying School (done with 'Learning to Fly' story mission)": false
+			},
+			"Learn Gym Moves": {
+				"Los Santos":false,
+				"San Fierro":false,
+				"Las Venturas":false
+			}
+		},
+		"Races": {
+			"Los Santos": {
+				"Little Loop": false,
+				"Backroad Wanderer": false,
+				"City Circuit": false,
+				"Vinewood": false,
+				"Freeway": false,
+				"Into The Country": false
+			},
+			"San Fierro": {
+				"Dirtbike Danger": false,
+				"Bandito County": false,
+				"Go-Go Karting": false,
+				"San Fierro Fastlane": false,
+				"San Fierro Hills": false,
+				"Country Endurance": false
+			},
+			"Las Venturas": {
+				"SF to LV": false,
+				"Dam Rider": false,
+				"Desert Tricks": false,
+				"LV Ringroad": false
+			},
+			"Las Venturas Airport": {
+				"World War Ace": false,
+				"Barnstorming": false,
+				"Military Service": false,
+				"Chopper Checkpoint": false,
+				"Whirly Bird Waypoint": false,
+				"Heli Hell": false
+			}
+		},
+		"Buy Properties": {
+			"Los Santos": {
+				"El Corona":false,
+				"Jefferson":false,
+				"Mulholland":false,
+				"Santa Maria Beach":false,
+				"Verona Beach":false,
+				"Willowfield":false
+			},
+			"Countryside": {
+				"Angel Pine":false,
+				"Blueberry":false,
+				"Dillimore":false,
+				"Palomino Creek":false,
+				"Whetstone":false
+			},
+			"San Fierro": {
+				"Calton Heights":false,
+				"Chinatown":false,
+				"Doherty":false,
+				"Hashbury":false,
+				"Paradiso":false,
+				"Queens":false
+			},
+			"Desert": {
+				"El Quebrados":false,
+				"Fort Carson":false,
+				"Tierra Robada":false
+			},
+			"Las Venturas": {
+				"Creek":false,
+				"Old Venturas Strip":false,
+				"Pirates In Men's Pants":false,
+				"Prickle Pine":false,
+				"Redsands West":false,
+				"Rockshore West":false,
+				"The Camel's Toe":false,
+				"The Clown's Pocket":false,
+				"Whitewood Estate":false
+			}
+		},
+		"Import/Export Vehicles": {
+			"List 1": {
+				"Admiral":false,
+				"Buffalo":false,
+				"Camper":false,
+				"Feltzer":false,
+				"Infernus":false,
+				"Patriot":false,
+				"Remington":false,
+				"Sanchez":false,
+				"Sentinel":false,
+				"Stretch":false
+			},
+			"List 2": {
+				"Blista Compact":false,
+				"Cheetah":false,
+				"Comet":false,
+				"FCR-900":false,
+				"Rancher":false,
+				"Sabre":false,
+				"Slamvan":false,
+				"Stafford":false,
+				"Stallion":false,
+				"Tanker":false
+			},
+			"List 3": {
+				"Banshee":false,
+				"BF Injection":false,
+				"Blade":false,
+				"Euros":false,
+				"Freeway":false,
+				"Huntley":false,
+				"Journey":false,
+				"Mesa":false,
+				"Super GT":false,
+				"ZR-350":false
+			}
+		},
+		"Collectibles": {
+			"Spray Tags": {
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false,
+				"5": false,
+				"6": false,
+				"7": false,
+				"8": false,
+				"9": false,
+				"10": false,
+				"11": false,
+				"12": false,
+				"13": false,
+				"14": false,
+				"15": false,
+				"16": false,
+				"17": false,
+				"18": false,
+				"19": false,
+				"20": false,
+				"21": false,
+				"22": false,
+				"23": false,
+				"24": false,
+				"25": false,
+				"26": false,
+				"27": false,
+				"28": false,
+				"29": false,
+				"30": false,
+				"31": false,
+				"32": false,
+				"33": false,
+				"34": false,
+				"35": false,
+				"36": false,
+				"37": false,
+				"38": false,
+				"39": false,
+				"40": false,
+				"41": false,
+				"42": false,
+				"43": false,
+				"44": false,
+				"45": false,
+				"46": false,
+				"47": false,
+				"48": false,
+				"49": false,
+				"50": false,
+				"51": false,
+				"52": false,
+				"53": false,
+				"54": false,
+				"55": false,
+				"56": false,
+				"57": false,
+				"58": false,
+				"59": false,
+				"60": false,
+				"61": false,
+				"62": false,
+				"63": false,
+				"64": false,
+				"65": false,
+				"66": false,
+				"67": false,
+				"68": false,
+				"69": false,
+				"70": false,
+				"71": false,
+				"72": false,
+				"73": false,
+				"74": false,
+				"75": false,
+				"76": false,
+				"77": false,
+				"78": false,
+				"79": false,
+				"80": false,
+				"81": false,
+				"82": false,
+				"83": false,
+				"84": false,
+				"85": false,
+				"86": false,
+				"87": false,
+				"88": false,
+				"89": false,
+				"90": false,
+				"91": false,
+				"92": false,
+				"93": false,
+				"94": false,
+				"95": false,
+				"96": false,
+				"97": false,
+				"98": false,
+				"99": false,
+				"100": false
+			},
+			"Snapshots": {
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false,
+				"5": false,
+				"6": false,
+				"7": false,
+				"8": false,
+				"9": false,
+				"10": false,
+				"11": false,
+				"12": false,
+				"13": false,
+				"14": false,
+				"15": false,
+				"16": false,
+				"17": false,
+				"18": false,
+				"19": false,
+				"20": false,
+				"21": false,
+				"22": false,
+				"23": false,
+				"24": false,
+				"25": false,
+				"26": false,
+				"27": false,
+				"28": false,
+				"29": false,
+				"30": false,
+				"31": false,
+				"32": false,
+				"33": false,
+				"34": false,
+				"35": false,
+				"36": false,
+				"37": false,
+				"38": false,
+				"39": false,
+				"40": false,
+				"41": false,
+				"42": false,
+				"43": false,
+				"44": false,
+				"45": false,
+				"46": false,
+				"47": false,
+				"48": false,
+				"49": false,
+				"50": false
+			},
+			"Horseshoes": {
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false,
+				"5": false,
+				"6": false,
+				"7": false,
+				"8": false,
+				"9": false,
+				"10": false,
+				"11": false,
+				"12": false,
+				"13": false,
+				"14": false,
+				"15": false,
+				"16": false,
+				"17": false,
+				"18": false,
+				"19": false,
+				"20": false,
+				"21": false,
+				"22": false,
+				"23": false,
+				"24": false,
+				"25": false,
+				"26": false,
+				"27": false,
+				"28": false,
+				"29": false,
+				"30": false,
+				"31": false,
+				"32": false,
+				"33": false,
+				"34": false,
+				"35": false,
+				"36": false,
+				"37": false,
+				"38": false,
+				"39": false,
+				"40": false,
+				"41": false,
+				"42": false,
+				"43": false,
+				"44": false,
+				"45": false,
+				"46": false,
+				"47": false,
+				"48": false,
+				"49": false,
+				"50": false
+			},
+			"Oysters": {
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false,
+				"5": false,
+				"6": false,
+				"7": false,
+				"8": false,
+				"9": false,
+				"10": false,
+				"11": false,
+				"12": false,
+				"13": false,
+				"14": false,
+				"15": false,
+				"16": false,
+				"17": false,
+				"18": false,
+				"19": false,
+				"20": false,
+				"21": false,
+				"22": false,
+				"23": false,
+				"24": false,
+				"25": false,
+				"26": false,
+				"27": false,
+				"28": false,
+				"29": false,
+				"30": false,
+				"31": false,
+				"32": false,
+				"33": false,
+				"34": false,
+				"35": false,
+				"36": false,
+				"37": false,
+				"38": false,
+				"39": false,
+				"40": false,
+				"41": false,
+				"42": false,
+				"43": false,
+				"44": false,
+				"45": false,
+				"46": false,
+				"47": false,
+				"48": false,
+				"49": false,
+				"50": false
+			}
+		}
+
+}
+}
