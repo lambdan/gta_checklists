@@ -95,7 +95,7 @@
 				"Rumble": false
 			},
 			"Toyz": {
-				"Diablo Destruction (Portland": false,
+				"Diablo Destruction (Portland)": false,
 				"Mafia Massacre (Portland)": false,
 				"Casino Calamity (Staunton Island)": false,
 				"Rumpo Rampage (Shoreside Vale)": false
@@ -161,51 +161,7 @@
 			}
 		},
 		"Collectibles": {
-			"Rampages": {
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": false,
-				"5": false,
-				"6": false,
-				"7": false,
-				"8": false,
-				"9": false,
-				"10": false,
-				"11": false,
-				"12": false,
-				"13": false,
-				"14": false,
-				"15": false,
-				"16": false,
-				"17": false,
-				"18": false,
-				"19": false,
-				"20": false
-			},
-			"Unique Jumps": {
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": false,
-				"5": false,
-				"6": false,
-				"7": false,
-				"8": false,
-				"9": false,
-				"10": false,
-				"11": false,
-				"12": false,
-				"13": false,
-				"14": false,
-				"15": false,
-				"16": false,
-				"17": false,
-				"18": false,
-				"19": false,
-				"20": false
-			}, 
-			"Hidden Packages": {
+			"Hidden Packages - Portland": {
 				"1": false,
 				"2": false,
 				"3": false,
@@ -238,7 +194,10 @@
 				"30": false,
 				"31": false,
 				"32": false,
-				"33": false,
+				"33": false
+			},
+			"Hidden Packages - Staunton Island":
+			{
 				"34": false,
 				"35": false,
 				"36": false,
@@ -274,7 +233,9 @@
 				"66": false,
 				"67": false,
 				"68": false,
-				"69": false,
+				"69": false
+			},
+			"Hidden Packages - Shoreside Vale": {
 				"70": false,
 				"71": false,
 				"72": false,
@@ -306,8 +267,59 @@
 				"98": false,
 				"99": false,
 				"100": false
+			},
+			"Rampages - Portland": {
+				"20 Mafia with AK": false,
+				"10 Vehicles with Grenades": false,
+				"20 Triads with Shotgun": false,
+				"13 Vehicles with Rocket Launcher": false,
+				"30 Diablos with M16": false,
+				"25 Triads with Uzi": false
+			},
+			"Rampages - Staunton Island": {
+				"25 Yakuza with Flame Thrower": false,
+				"30 Yardies with Rocket Launcher": false,
+				"8 Vehicles with Shotgun": false,
+				"25 Yardies with Grenades": false,
+				"15 Vehicles with M16": false,
+				"17 Yardies with Sniper": false,
+				"16 Yakuza with Molotovs": false
+			},
+			"Rampages - Shoreside Vale": {
+				"20 Cartel with Sniper": false,
+				"7 Vehicles with Uzi (Drive-by)": false,
+				"15 Vehicles with Rocket Launcher": false,
+				"20 Cartel (with vehicle)": false,
+				"20 Hoods with Shotgun": false,
+				"20 Hoods with M16": false,
+				"20 Cartel with Flame Thrower": false
+			},
+			"Unique Stunt Jumps - Portland": {
+				"1 (Train tracks next to the water)": false,
+				"2 (Subway entrance)": false,
+				"3 (Hangar next to Joeys garage)": false,
+				"4 (Hangar next to water)": false,
+				"5 (Water gap)": false,
+				"6 (Trailers next to water)": false,
+				"7 (Callahan Bridge - Yellow/Black ramp)": false,
+				"8 (Callahan Bridge - Grass ramp)": false
+			},
+			"Unique Stunt Jumps - Staunton Island": {
+				"9 (Dirt ramp near Callahan Bridge)": false,
+				"10 (Grass ramp near Callahan Bridge)": false,
+				"11 (Internet Cafe)": false,
+				"12 (Car Park)": false
+			},
+			"Unique Stunt Jumps - Shoreside Vale": {
+				"13 (Airport - over a plane)": false,
+				"14 (Airport - corner hangar next to water)": false,
+				"15 (Airport -  hangar next to helicopters)": false,
+				"16 (Airport - hangar near runway)": false,
+				"17 (Over water to Wichita Gardens)": false,
+				"18 (Over water from Cedar Grove)": false,
+				"19 (Pike Creek - towards airport)": false,
+				"20 (Pike Creek - towards Cedar Grove)": false
 			}
 		}
-
 	}
 }
