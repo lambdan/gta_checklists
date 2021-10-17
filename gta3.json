@@ -1,13 +1,17 @@
 {
-	"GTA3": {
-		"Story Missions": {
-			"Luigi": {
+	"GTA3":
+	{
+		"Story Missions":
+		{
+			"Luigi":
+			{
 				"Luigi's Girl": false,
 				"Don't Spank Ma Bitch Up": false,
 				"Drive Misty For Me": false,
 				"Pump-Action Pimp": false
 			},
-			"Joey": {
+			"Joey":
+			{
 				"Mike Lips Last Lunch": false,
 				"Farewell 'Chunky' Lee Chong": false,
 				"Van Heist": false,
@@ -15,21 +19,24 @@
 				"Dead Skunk In The Trunk": false,
 				"The Getaway": false
 			},
-			"Tony": {
+			"Tony":
+			{
 				"Taking Out The Laundry": false,
 				"The Pick-Up": false,
 				"Salvatore's Called A Meeting": false,
 				"Triads And Tribulations": false,
 				"Blow Fish": false
 			},
-			"Salvatore": {
+			"Salvatore":
+			{
 				"Chaperone": false,
 				"Cutting The Grass": false,
 				"Bomb Da Base Act 1": false,
 				"Bomb Da Base Act 2": false,
 				"Last Requests": false
 			},
-			"Asuka": {
+			"Asuka":
+			{
 				"Sayonara Salvatore": false,
 				"Under Surveillance": false,
 				"Paparazzi Purge": false,
@@ -40,14 +47,16 @@
 				"S.A.M.": false,
 				"Ransom": false
 			},
-			"Kenji": {
+			"Kenji":
+			{
 				"Kanbu Bust-Out": false,
 				"Grand Theft Auto": false,
 				"Deal Steal": false,
 				"Shima": false,
 				"Smack Down": false
-			}, 
-			"Ray": {
+			},
+			"Ray":
+			{
 				"Silence The Sneak": false,
 				"Arms Shortage": false,
 				"Evidence Dash": false,
@@ -55,7 +64,8 @@
 				"Plaster Blaster": false,
 				"Marked Man": false
 			},
-			"Donald Love": {
+			"Donald Love":
+			{
 				"Liberator": false,
 				"Waka-Gashira Wipeout": false,
 				"A Drop In The Ocean": false,
@@ -64,57 +74,72 @@
 				"Decoy": false,
 				"Love's Disappearance": false
 			},
-			"Catalina": {
+			"Catalina":
+			{
 				"The Exchange": false
 			}
 		},
-		"Side Missions": {
-			"Marty Chonks": {
+		"Side Missions":
+		{
+			"Marty Chonks":
+			{
 				"The Crook": false,
 				"The Thieves": false,
 				"The Wife": false,
 				"Her Lover": false
 			},
-			"El Burro": {
+			"El Burro":
+			{
 				"Turismo": false,
 				"I Scream, You Scream": false,
 				"Trial By Fire": false,
 				"Big 'N' Veiny": false
 			},
-			"King Courtney": {
+			"King Courtney":
+			{
 				"Bling-Bling Scramble": false,
 				"Uzi Rider": false,
 				"Gang Car Round-Up": false,
 				"Kingdom Come": false
 			},
-			"D-Ice": {
+			"D-Ice":
+			{
 				"Uzi Money": false,
 				"Toyminator": false,
 				"Rigged To Blow": false,
 				"Bullion Run": false,
 				"Rumble": false
 			},
-			"Toyz": {
+			"Toyz":
+			{
 				"Diablo Destruction (Portland)": false,
 				"Mafia Massacre (Portland)": false,
 				"Casino Calamity (Staunton Island)": false,
 				"Rumpo Rampage (Shoreside Vale)": false
 			},
-			"Offroad Missions": {
+			"Offroad Missions":
+			{
 				"Patriot Playground (Portland)": false,
 				"A Ride In The Park (Staunton Island)": false,
 				"Multi Story Mayhem (Staunton Island)": false,
 				"Gripped (Shoreside Vale)": false
 			},
-			"R3 Missions": {
+			"R3 Missions":
+			{
 				"Paramedic (Pass Level 12)": false,
 				"Taxi Driver (100 Fares)": false,
-				"Vigilante (20 Kills in each island)": false,
-				"Firetruck (20 Fires in each island)": false
+				"Vigilante (Portland): 20 kills": false,
+				"Vigilante (Staunton Island): 20 kills": false,
+				"Vigilante (Shoreside Vale): 20 kills": false,
+				"Firefighter (Portland): extinguish 20 fires": false,
+				"Firefighter (Staunton Island): extinguish 20 fires": false,
+				"Firefighter (Shoreside Vale): extinguish 20 fires": false
 			}
 		},
-		"Import/Export": {
-			"Portland Import/Export": {
+		"Import/Export":
+		{
+			"Portland Import/Export":
+			{
 				"Securicar": false,
 				"Moonbeam": false,
 				"Coach": false,
@@ -132,7 +157,8 @@
 				"Rumpo": false,
 				"Pony": false
 			},
-			"Portland Emergency Vehicle Crane": {
+			"Portland Emergency Vehicle Crane":
+			{
 				"Police Car": false,
 				"Enforcer": false,
 				"FBI Car": false,
@@ -141,7 +167,8 @@
 				"Ambulance": false,
 				"Fire Truck": false
 			},
-			"Shoreside Vale Import/Export": {
+			"Shoreside Vale Import/Export":
+			{
 				"Sentinel": false,
 				"Cheetah": false,
 				"Banshee": false,
@@ -160,8 +187,10 @@
 				"Esperanto": false
 			}
 		},
-		"Collectibles": {
-			"Hidden Packages - Portland": {
+		"Collectibles":
+		{
+			"Hidden Packages - Portland":
+			{
 				"1": false,
 				"2": false,
 				"3": false,
@@ -235,7 +264,8 @@
 				"68": false,
 				"69": false
 			},
-			"Hidden Packages - Shoreside Vale": {
+			"Hidden Packages - Shoreside Vale":
+			{
 				"70": false,
 				"71": false,
 				"72": false,
@@ -268,7 +298,8 @@
 				"99": false,
 				"100": false
 			},
-			"Rampages - Portland": {
+			"Rampages - Portland":
+			{
 				"20 Mafia with AK": false,
 				"10 Vehicles with Grenades": false,
 				"20 Triads with Shotgun": false,
@@ -276,7 +307,8 @@
 				"30 Diablos with M16": false,
 				"25 Triads with Uzi": false
 			},
-			"Rampages - Staunton Island": {
+			"Rampages - Staunton Island":
+			{
 				"25 Yakuza with Flame Thrower": false,
 				"30 Yardies with Rocket Launcher": false,
 				"8 Vehicles with Shotgun": false,
@@ -285,7 +317,8 @@
 				"17 Yardies with Sniper": false,
 				"16 Yakuza with Molotovs": false
 			},
-			"Rampages - Shoreside Vale": {
+			"Rampages - Shoreside Vale":
+			{
 				"20 Cartel with Sniper": false,
 				"7 Vehicles with Uzi (Drive-by)": false,
 				"15 Vehicles with Rocket Launcher": false,
@@ -294,7 +327,8 @@
 				"20 Hoods with M16": false,
 				"20 Cartel with Flame Thrower": false
 			},
-			"Unique Stunt Jumps - Portland": {
+			"Unique Stunt Jumps - Portland":
+			{
 				"1 (Train tracks next to the water)": false,
 				"2 (Subway entrance)": false,
 				"3 (Hangar next to Joeys garage)": false,
@@ -304,13 +338,15 @@
 				"7 (Callahan Bridge - Yellow/Black ramp)": false,
 				"8 (Callahan Bridge - Grass ramp)": false
 			},
-			"Unique Stunt Jumps - Staunton Island": {
+			"Unique Stunt Jumps - Staunton Island":
+			{
 				"9 (Dirt ramp near Callahan Bridge)": false,
 				"10 (Grass ramp near Callahan Bridge)": false,
 				"11 (Internet Cafe)": false,
 				"12 (Car Park)": false
 			},
-			"Unique Stunt Jumps - Shoreside Vale": {
+			"Unique Stunt Jumps - Shoreside Vale":
+			{
 				"13 (Airport - over a plane)": false,
 				"14 (Airport - corner hangar next to water)": false,
 				"15 (Airport -  hangar next to helicopters)": false,
