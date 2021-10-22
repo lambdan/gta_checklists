@@ -37,7 +37,7 @@
                 "Pay Day For Ray": false,
                 "Two Faced Tanner": false,
                 "Bait": false,
-                "Expresso-2-Go": false,
+                "Espresso-2-Go!": false,
                 "S.A.M.": false,
                 "Ransom": false
             },
@@ -61,7 +61,7 @@
                 "Waka-Gashira Wipeout": false,
                 "A Drop In The Ocean": false,
                 "Grand Theft Aero": false,
-                "Escort Services": false,
+                "Escort Service": false,
                 "Decoy": false,
                 "Love's Disappearance": false
             },
@@ -299,30 +299,30 @@
                 "20 Cartel with Flame Thrower": false
             },
             "Unique Stunt Jumps - Portland": {
-                "1 (Train tracks next to the water)": false,
-                "2 (Subway entrance)": false,
-                "3 (Hangar next to Joeys garage)": false,
-                "4 (Hangar next to water)": false,
-                "5 (Water gap)": false,
-                "6 (Trailers next to water)": false,
-                "7 (Callahan Bridge - Yellow/Black ramp)": false,
-                "8 (Callahan Bridge - Grass ramp)": false
+                "Red Light District: Concrete ramp below the train tracks (go over train tracks)": false,
+                "Red Light District: Wooden ramp near subway entrance (land on train tracks)": false,
+                "Trenton (Joeys garage): Wooden ramp nearby (go over the hangar)": false,
+                "Harbor: Wooden ramp near traffic cones (land on second pair of hangars)": false,
+                "Harbor: Dirt ramp (cross the water gap)": false,
+                "Harbor: Wooden ramp across trailers": false,
+                "Callahan Bridge: Yellow/black ramp (land on the grass in the middle)": false,
+                "Callahan Bridge: Grass ramp (right after yellow/black ramp jump)": false
             },
             "Unique Stunt Jumps - Staunton Island": {
-                "9 (Dirt ramp near Callahan Bridge)": false,
-                "10 (Grass ramp near Callahan Bridge)": false,
-                "11 (Internet Cafe)": false,
-                "12 (Car Park)": false
+                "Dirt ramp underneath Callahan Bridge (water gap)": false,
+                "Grass ramp in middle of road (jump over Callahan Bridge)": false,
+                "Stairs in glass windows store": false,
+                "Ramp out of Multistory Car Park": false
             },
             "Unique Stunt Jumps - Shoreside Vale": {
-                "13 (Airport - over a plane)": false,
-                "14 (Airport - corner hangar next to water)": false,
-                "15 (Airport -  hangar next to helicopters)": false,
-                "16 (Airport - hangar near runway)": false,
-                "17 (Over water to Wichita Gardens)": false,
-                "18 (Over water from Cedar Grove)": false,
-                "19 (Pike Creek - towards airport)": false,
-                "20 (Pike Creek - towards Cedar Grove)": false
+                "Airport - over a plane near the entrance": false,
+                "Airport - over the hangar next to the water": false,
+                "Airport - over the hangar next to helicopters": false,
+                "Airport - over the hangar near the runway)": false,
+                "Broken twisted bridge over the water": false,
+                "Steep rocks next to a big bend in the road, over the water": false,
+                "Pike Creek - Wood ramp to small area with another wood ramp": false,
+                "Pike Creek - Wood ramp in narrow alley, land on roof of garage": false
             }
         }
     }
